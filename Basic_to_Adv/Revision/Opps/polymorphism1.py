@@ -7,6 +7,10 @@ class Parent:
 class Child(Parent):  # child inherits the parent class
     def transport(Self):
         print("Bike")   #same functionality we used it's overided
-        
+    
 c=Child()
+d=Parent()
+d.transport()
 c.transport()
+
+
