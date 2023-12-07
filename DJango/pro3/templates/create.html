@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Your Model</title>
+</head>
+<body>
+    <h2>Create Your Model</h2>
+    <form method="post" action="{% url 'create' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create</button>
+    </form>
+    <br>
+    <a href="{% url 'index' %}">Back to List</a>
+</body>
+</html>

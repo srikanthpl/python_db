@@ -1,0 +1,16 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Model List</title>
+</head>
+<body>
+    <h2>Your Model List</h2>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.name }} - {{ item.description }} (<a href="{% url 'update' item.pk %}">Edit</a> | <a href="{% url 'delete' item.pk %}">Delete</a>)</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create' %}">Create New Item</a>
+</body>
+</html>
