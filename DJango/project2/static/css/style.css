@@ -4,3 +4,15 @@
     height: 30vh;
     overflow: hidden;
 }
+
+html{
+    font-size: 14px;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+a{
+    text-decoration: none;
+}

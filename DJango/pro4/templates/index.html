@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Model List</title>
+</head>
+<body>
+    <h2>Home Page</h2>
+    <form action='/insert' method="post">
+        {% csrf_token %}
+        <input type='text' name='name' placeholder='Enter your Name'><br/>
+        <input type='text' name='loc' placeholder='Enter your Location'><br/>
+        <input type='number'name='sal' placeholder='Enter your Salary'><br/>
+        <input type='submit'value='submit'>
+    </form>
+        
+    <table style="border:1px solid black;border-collapse: collapse;">
+        <thead >
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for datas in data %}
+            <tr>
+                <td>{{datas.Ename}}</td>
+                <td>{{datas.Eloc}}</td>
+                <td>{{datas.Esal}}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% endfor%}
+
+
+    <br/>
+
+</body>
+</html>
