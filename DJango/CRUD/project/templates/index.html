@@ -100,15 +100,15 @@
   </thead>
   <tbody>
 
-  {% for d in data %}
+  {% for da in data %}
     <tr>
       <th scope="row">{{d.id}}</th>
-      <td>{{d.name}}</td>
-      <td>{{d.email}}</td>
-      <td>{{d.age}}</td>
-      <td>{{d.gender}}</td>
-      <td><a type="button" href="/update/{{d.id}}" class="btn btn-outline-primary">Edit</a></td>
-      <td><a type="button" href="/delete/{{d.id}}" class="btn btn-outline-danger">Delete</a></td>
+      <td>{{da.name}}</td>
+      <td>{{da.email}}</td>
+      <td>{{da.age}}</td>
+      <td>{{da.gender}}</td>
+      <td><a type="button" href="/update/{{da.id}}" class="btn btn-outline-primary">Edit</a></td>
+      <td><a type="button" href="/delete/{{da.id}}" class="btn btn-outline-danger">Delete</a></td>
     </tr>
   {% endfor %}
 
